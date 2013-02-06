@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= data.page.title || "The Middleman" %></title>
+    
+    <%= stylesheet_link_tag "application" %>
+
+    <!--font-->
+    <link rel="stylesheet" type="text/css" href="assets/font/bebasneue.css"  charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quicksand" />
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <%= javascript_include_tag  "all" %>
+  </head>
+  
+  <body class="<%= page_classes %>">
+
+    <!--background image
+    <div class="epicFullscreen">
+      <img class="epicImg" src="/assets/images/cartel/fullscreen-bkg.jpg" alt=""/>
+    </div>-->
+
+    <!--start header-->
+    <div id="header-wrapper">
+      <div id="header-inner">
+        <header>
+          <div id="logo">
+            <a href="index.html"><img src="/assets/images/cartel/logo.png" alt="cartel logo" /></a>
+          </div>
+
+          <!--mobileMenu toggle-->
+          <div class="mobileMenuToggle"><a href=""></a></div>
+
+          <nav>
+            <ul class="navigation">
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a>
+                <ul class="sub-menu">
+                  <li><a href="#">A sub menu item</a></li>
+                  <li><a href="#">Another sub menu item</a></li>
+                  <li><a href="#">And another sub menu item</a></li>
+                  <li><a href="#">And yet another</a></li>
+                  <li><a href="#">And another</a></li>
+                </ul>   
+              </li>
+              <li><a href="blog-regular.html">Blog</a>
+                <ul class="sub-menu">
+                  <li><a href="blog-grid.html">Blog Grid Layout</a></li>
+                </ul>     
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a class="active" href="images-captions.html">Styling</a>
+                <ul class="sub-menu">
+                  <li><a href="images-captions.html">Images & Captions</a></li>
+                  <li><a href="ui-elements.html">UI Elements</a></li>
+                  <li><a class="active" href="layout.html">Layout Styling</a></li>
+                </ul>   
+              </li>
+            </ul>
+          </nav>
+
+        </header>
+      </div>
+    </div>
+
+    <!--start content-->
+    <div id="content-wrapper">
+      <section class="pages clearfix">
+        <%= yield %>
+      </section>
+    </div>
+
+    <!--start footer-->
+    <div id="footer-wrapper">
+      <div id="footer-top" class="clearfix">
+        <footer>
+          <div class="column_one_third column-footer-widget">
+            <div class="widget_text">
+              <div id="footer-logo">
+                <img src="/assets/images/cartel/logo-common.png" alt="" />
+              </div>
+              <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, ... Lorem Ipsum is simply dummy text of the printing and typesetting industry.<a href="">Read More.</a></p>
+            </div>
+          </div>
+          <div class="column_one_third column-footer-widget">
+            <div class="widget_twitter">
+              <h6 class="widgettitle">Ongoing</h6>
+              <div id='filter' class="query"></div>
+            </div>
+          </div>
+          <div class="column_one_third column-footer-widget last">
+            <div class="widget_text">
+              <h6 class="widgettitle">Let's Collaborate</h6>
+              <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,</p>
+              <p>Tel: +1 55 65 15 45 85/+1 65 98 56 45 45
+                Mail: <a href="">info@kartel.com</a></p>
+              </div>
+            </div>
+          </footer>
+        </div>
+        <div id="footer-bottom">
+          <footer>
+            <!--social networks-->
+            <ul class="connect">
+              <li><a href=""><span class="flickr"></span>Flickr</a></li>
+              <li><a href=""><span class="dribbble"></span>Dribbble</a></li>
+              <li><a href=""><span class="pinterest"></span>Pinterest</a></li>
+              <li><a href=""><span class="twitter"></span>Twitter</a></li>
+            </ul>
+            <p class="footer-copyright">&copy; copyright 2013. UDTHEMES. All Rights Reserved.</p>
+          </footer>
+        </div>
+      </div>
+    
+  </body>
+</html>
+
+
+
+
