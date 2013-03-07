@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= data.page.title || "The Middleman" %></title>
+    
+    <%= stylesheet_link_tag "application" %>
+
+    <!--font-->
+    <link rel="stylesheet" type="text/css" href="assets/font/bebasneue.css"  charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quicksand" />
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+    <%= javascript_include_tag  "application" %>
+  </head>
+  
+  <body class="<%= page_classes %>">
+    <%= partial "layouts/navigation" %>
+
+    <!--start content-->
+    <div id="content-wrapper">
+      <% if current_page.data.section %>
+        <section class="<%= current_page.data.section %>">
+      <% else %>
+        <section class="pages clearfix">
+      <% end %>
+
+        <!--start section title-->
+        <div id="section-title">
+          <h1><%= current_page.data.title %></h1>
+        </div>
+
+        <%= yield %>
+
+      </section>
+    </div>
+
+    <%= partial "layouts/footer" %>
+  </body>
+</html>
+
+
+
+
