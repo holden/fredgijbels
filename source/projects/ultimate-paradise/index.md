@@ -1,6 +1,6 @@
 ---
 title: Kitch.en Poetry
-date: 2013/07/01
+date: 2013/04/01
 tags: irony
 type: 3
 ---
