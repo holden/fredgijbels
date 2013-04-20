@@ -16,29 +16,16 @@
 
       <nav>
         <ul class="navigation">
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a>
+          <li><a href="index.html">Projects</a>
             <ul class="sub-menu">
-              <li><a href="#">A sub menu item</a></li>
-              <li><a href="#">Another sub menu item</a></li>
-              <li><a href="#">And another sub menu item</a></li>
-              <li><a href="#">And yet another</a></li>
-              <li><a href="#">And another</a></li>
-            </ul>   
+              <% blog.articles.each_with_index do |article,i| %>
+                <li><%= link_to "#{i} #{article.title}", article %></li>
+              <% end %>
+            </ul>
           </li>
-          <li><a href="blog-regular.html">Blog</a>
-            <ul class="sub-menu">
-              <li><a href="blog-grid.html">Blog Grid Layout</a></li>
-            </ul>     
-          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog-regular.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a class="active" href="images-captions.html">Styling</a>
-            <ul class="sub-menu">
-              <li><a href="images-captions.html">Images & Captions</a></li>
-              <li><a href="ui-elements.html">UI Elements</a></li>
-              <li><a class="active" href="layout.html">Layout Styling</a></li>
-            </ul>   
-          </li>
         </ul>
       </nav>
 
