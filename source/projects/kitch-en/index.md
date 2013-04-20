@@ -1,5 +1,5 @@
 ---
-title: Paradise
+title: Kitch.en Poetry
 date: 2010/07/01
 tags: irony
 type: 4

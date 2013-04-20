@@ -23,13 +23,17 @@
 	  	<ul>
 	    	<li id="prevProject">
 	    		<%#= link_to '', blog.articles.first, title: 'Previous Project' %>
-	    		<%= link_to '', current_page.previous_article, title: 'Next Project' %>
+	    		<% unless current_page.previous_article.blank? %>
+	    			<%= link_to '', current_page.previous_article, title: 'Previous Project' %>
+	    		<% end %>
 	      </li>
 	      <li id="closeProject">
-	      	<%= link_to '', '/projects', title: 'Back to Grid' %>
+	      	<%= link_to '', '/', title: 'Back to Grid' %>
 	      </li>
 	      <li id="nextProject">
-	      	<%= link_to '', current_page.next_article, title: 'Next Project' %>
+	      	<% unless current_page.next_article.blank? %>
+	      		<%= link_to '', current_page.next_article, title: 'Next Project' %>
+	      	<% end %>
 	      </li>
 	     </ul>
 	  </div>
