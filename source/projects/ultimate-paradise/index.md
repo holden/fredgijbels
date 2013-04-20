@@ -1,5 +1,5 @@
 ---
-title: Kitch.en Poetry
+title: Ultimate Paradise
 date: 2013/04/01
 tags: irony
 type: 3

@@ -52,7 +52,22 @@ $(document).ready(function(){
 			
 	});*/
 
+	//init flex slider
+	$('.flexslider').flexslider({
+						
+			animation: "face",
+			slideDirection: "horizontal",
+			slideshow: true,
+			slideshowSpeed: 3500,
+			animationDuration: 500,
+			directionNav: true,
+			controlNav: true 
+				
+	 });
+
 });
+
+
 
 /*twitter plugin
 ---------------------*/

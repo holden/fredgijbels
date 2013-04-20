@@ -19,7 +19,7 @@ activate :blog do |blog|
   blog.permalink = "projects/:title.html"
   blog.default_extension = ".markdown"
   blog.sources = "projects/:title/index.html"
-  #blog.layout = "portfolio"
+  blog.layout = "portfolio"
   #blog.paginate = false
 end
 

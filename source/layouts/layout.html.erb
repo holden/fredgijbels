@@ -18,10 +18,7 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 
-    <%= javascript_include_tag  "application" %>
   </head>
   
   <body class="<%= page_classes %>">
@@ -29,23 +26,13 @@
 
     <!--start content-->
     <div id="content-wrapper">
-      <% if current_page.data.section %>
-        <section class="<%= current_page.data.section %>">
-      <% else %>
-        <section class="pages clearfix">
-      <% end %>
-
-        <!--start section title-->
-        <div id="section-title">
-          <h1><%= current_page.data.title %></h1>
-        </div>
-
         <%= yield %>
-
-      </section>
     </div>
 
     <%= partial "layouts/footer" %>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    <%= javascript_include_tag  "application" %>
   </body>
 </html>
 

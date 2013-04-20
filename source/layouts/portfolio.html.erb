@@ -1,0 +1,38 @@
+<% wrap_layout :layout do %>
+	<section id="ajaxpage" class="pages clearfix">
+
+		<div class="featured-media-container clearfix">
+			<div class="flexslider">
+				<ul class="slides">
+					<% Dir["source#{current_page.url}*.jpg"].sort!.slice!(0..-2).map {|f| f.sub('source','')}.each do |image| %>
+						<li>
+							<%= image_tag image %>
+							<p class="flex-caption">And a nice brief caption here</p>
+						</li>
+					<% end %>
+				</ul>
+			</div>
+		</div>  
+
+		<h3><%= current_page.title %></h3>
+		
+		<%= current_page.body %>
+
+	  <!--folio nav-->
+	  <div id="folio-navigation">
+	  	<ul>
+	    	<li id="prevProject">
+	    		<%#= link_to '', blog.articles.first, title: 'Previous Project' %>
+	    		<%= link_to '', current_page.previous_article, title: 'Next Project' %>
+	      </li>
+	      <li id="closeProject">
+	      	<%= link_to '', '/projects', title: 'Back to Grid' %>
+	      </li>
+	      <li id="nextProject">
+	      	<%= link_to '', current_page.next_article, title: 'Next Project' %>
+	      </li>
+	     </ul>
+	  </div>
+	</section>
+
+<% end %>

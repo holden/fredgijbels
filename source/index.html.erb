@@ -3,10 +3,16 @@ title: Welcome to Irony™
 section: homepage
 ---
 
-<div id="grid" class="clearfix">
-	<% blog.articles.each do |article| %>
-			<div class="thumb thumb-type-<%= article.data.type %>">
-				<%= link_to image_tag("#{article.url}thumb.jpg"), article.url, title: 'paradise', :"data-logo" => '/assets/images/main/logo.png' %>
-		</div>
-	<% end %>
-</div>
+<section class="homepage">
+
+  <div id="section-title">
+    <h1><%= current_page.data.title %></h1>
+  </div>
+	<div id="grid" class="clearfix">
+		<% blog.articles.each do |article| %>
+				<div class="thumb thumb-type-<%= article.data.type %>">
+					<%= link_to image_tag("#{article.url}thumb.jpg"), article.url, title: 'paradise', :"data-logo" => '/assets/images/main/logo.png' %>
+			</div>
+		<% end %>
+	</div>
+</section
