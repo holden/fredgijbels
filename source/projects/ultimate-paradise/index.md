@@ -5,10 +5,7 @@ tags: irony
 type: 3
 ---
 
-Toffee danish sweet roll. Cookie topping powder toffee ice cream muffin dragée. 
-Soufflé caramels apple pie chocolate cake cookie cake. 
-Macaroon tiramisu halvah soufflé. Dessert toffee halvah chocolate cake bear claw.
+This is a try-ot for the new website for my artistic works.
+Ultimate Paradise was an exhibition in Olympia Galeria of my pigs: 'Sex in The City'
 
-READMORE
-
-Blah blah
+READMORE: later
